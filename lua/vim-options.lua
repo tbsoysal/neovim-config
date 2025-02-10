@@ -44,3 +44,4 @@ vim.api.nvim_set_keymap('n', '<leader>q', ':wqa<CR>', { noremap = true, silent =
 
 -- no highlight after search with esc 
 vim.api.nvim_set_keymap('n', '<Esc>', ':nohlsearch<CR>', { noremap = true, silent = true })
+
