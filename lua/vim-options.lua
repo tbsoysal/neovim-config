@@ -31,7 +31,6 @@ vim.api.nvim_set_keymap('n', '<S-l>', ':bnext<CR>', { noremap = true, silent = t
 -- Close current window and buffer with Ctrl + x
 vim.api.nvim_set_keymap('n', '<C-x>', ':bdelete<CR>:close<CR>', { noremap = true, silent = true })
 
-
 -- Close the current buffer using Shift + x
 vim.api.nvim_set_keymap('n', '<S-x>', ':bdelete<CR>', { noremap = true, silent = true })
 
@@ -45,3 +44,14 @@ vim.api.nvim_set_keymap('n', '<leader>q', ':wqa<CR>', { noremap = true, silent =
 -- no highlight after search with esc 
 vim.api.nvim_set_keymap('n', '<Esc>', ':nohlsearch<CR>', { noremap = true, silent = true })
 
+-- Change window size with ctrl + arrow keys
+vim.keymap.set("n", "<C-Up>",    ":resize +2<CR>", { silent = true })
+vim.keymap.set("n", "<C-Down>",  ":resize -2<CR>", { silent = true })
+vim.keymap.set("n", "<C-Left>",  ":vertical resize -2<CR>", { silent = true })
+vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", { silent = true })
+
+-- Keybinding for location list diagnostics
+vim.keymap.set("n", "<leader>dl", function()
+  vim.diagnostic.setloclist()
+  vim.cmd("lopen")
+end, { desc = "Show all diagnostics in location list" })
