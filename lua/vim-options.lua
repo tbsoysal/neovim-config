@@ -5,11 +5,11 @@ vim.cmd("set shiftwidth=2")
 vim.cmd("set number")
 vim.cmd("set relativenumber")
 vim.cmd("set nowrap")
-vim.cmd("set smartindent")
-vim.cmd("set autoindent")
 vim.cmd("set ignorecase")
 vim.cmd("set completeopt=menuone,noinsert,noselect")
 vim.cmd("set showmatch")
+vim.cmd("set autoindent")
+vim.cmd("set smartindent")
 
 vim.g.mapleader=" "
 
